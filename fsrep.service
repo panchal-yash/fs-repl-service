@@ -1,0 +1,13 @@
+
+[Unit]
+Description=Monitor the desired folder and sync with a dest folder
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/fsrepl.sh
+TimeoutStartSec=0
+Restart=on-failure
+
+
+[Install]
+WantedBy=multi-user.target
